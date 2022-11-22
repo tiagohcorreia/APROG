@@ -132,70 +132,7 @@ public class OperacoesTipicasComArrays {
             } */
 
 
-        //===================================================================================================
-
-        static Scanner ler = new Scanner(System.in);
-        static double[] arrayJuros = new double[6];
-
-        public static void main(String[] args) {
-            lerjuros();
-            double valorDeposito = ler.nextDouble();
-            System.out.printf("final value=" + "%.2f%n", calcularValorFinal(valorDeposito));
-        }
-
-        public static void lerjuros(){
-            for (int i = 0; i < 6; i++) {
-                arrayJuros[i] = ler.nextDouble();
-            }
-        }
-
-        public static double calcularValorFinal(double valorInicial){
-            double valorfinal = valorInicial;
-            for (int i = 0; i < 6; i++) {
-                valorfinal += (valorfinal*arrayJuros[i]);
-            }
-            return valorfinal;
-    }
-        //==============================================================================================================
-
-        static Scanner ler = new Scanner(System.in);
-        static int[] frequencias = new int[21];
-
-        public static void main(String[] args) {
-            int n;
-            n = ler.nextInt();
-            int[] array = new int[n];
-            array = lerClassificacoes(n);
-            calcularFrequencias(array);
-            mostrarFrequencias();
-        }
-
-        public static int[] lerClassificacoes(int n){
-            int[] array = new int[n];
-            for (int i = 0; i < n; i++) {
-                array[i] = ler.nextInt();
-            }
-            return array;
-        }
-
-        public static void calcularFrequencias(int[] array){
-            for (int i = 0; i < 21; i++) {
-                frequencias[i] = 0;
-                for (int j = 0; j < array.length; j++) {
-                    if(i == array[j]){
-                        frequencias[i]++;
-                    }
-                }
-            }
-        }
-
-        public static void mostrarFrequencias(){
-            for (int i = 0; i < 21; i++) {
-                System.out.println(i +" " + frequencias[i]);
-            }
-        }
-
-        //==================================================================================
+        //===============================================================================================================
 
         //Ordenação de array
         for (int i = 0; i < n - 1 ; i++) {
